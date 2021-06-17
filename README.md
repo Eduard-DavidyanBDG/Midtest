@@ -11,7 +11,12 @@ class Bazmankyun:
         self.lst = []
         self.count_of_sides = int(input("input count of sides: "))
         self.patasxan2 = "Sa bazmankun ernakyuna haves chunem asem inchqan"
-        print(self.patasxan2)
+        self.patasxan3 = "Ay qyal esi erankyun chi esi vabshe incha, qo matemi dasatun ova exel?!"
+
+        if self.count_of_sides < 3:
+            print(self.patasxan3)
+        elif self.count_of_sides > 4:
+            print(self.patasxan2)
 
 
 P = Bazmankyun()
@@ -65,5 +70,7 @@ class Baby(Erankyun, Qarankyun):
             print(E.patasxan)
         elif P.count_of_sides == 4:
             print(Q.patasxan)
-        else:
+        elif P.count_of_sides > 4:
             print(P.patasxan2)
+        elif P.count_of_sides < 3:
+            print(P.patasxan3)
